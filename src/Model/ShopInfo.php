@@ -63,6 +63,11 @@ class ShopInfo
     private $picture;
 
     /**
+     * @var bool
+     */
+    private $description;
+
+    /**
      * @return array
      */
     public function toArray()
@@ -77,6 +82,7 @@ class ShopInfo
             'email' => $this->getEmail(),
             'picture' => $this->getPicture(),
             'enable_auto_discounts' => $this->getAutoDiscount(),
+            'description' => $this->getDescription(),
         ];
     }
 
@@ -249,5 +255,10 @@ class ShopInfo
         $this->picture = $picture;
 
         return $this;
+    }
+
+    public function getDescription()
+    {
+        return $this->description;
     }
 }
