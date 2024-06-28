@@ -56,6 +56,12 @@ class ShopInfo
      */
     private $autoDiscount;
 
+
+    /**
+     * @var bool
+     */
+    private $picture;
+
     /**
      * @return array
      */
@@ -69,6 +75,7 @@ class ShopInfo
             'version' => $this->getVersion(),
             'agency' => $this->getAgency(),
             'email' => $this->getEmail(),
+            'picture' => $this->getPicture(),
             'enable_auto_discounts' => $this->getAutoDiscount(),
         ];
     }
@@ -229,6 +236,17 @@ class ShopInfo
     public function setAutoDiscount($autoDiscount)
     {
         $this->autoDiscount = $autoDiscount;
+
+        return $this;
+    }
+
+    public function getPicture()
+    {
+        return $this->picture;
+    }
+
+    public function setPicture($picture){
+        $this->picture = $picture;
 
         return $this;
     }
