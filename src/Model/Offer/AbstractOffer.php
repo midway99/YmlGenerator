@@ -717,6 +717,16 @@ abstract class AbstractOffer implements OfferInterface
         return $this;
     }
 
+    public function addParamArray($param_title,$array)
+    {
+        foreach ($array as $param) {
+
+            $this->addParam((new OfferParam)->setName($param_title)->setValue($param['title']));
+        }
+
+        return $this;
+    }
+
     /**
      * @return array
      */
