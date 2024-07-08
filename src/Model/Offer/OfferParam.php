@@ -30,6 +30,10 @@ class OfferParam
      * @var string
      */
     private $value;
+    /**
+     * @var mixed
+     */
+    private $order;
 
     /**
      * @return string
@@ -87,6 +91,18 @@ class OfferParam
     public function setValue($value)
     {
         $this->value = $value;
+
+        return $this;
+    }
+
+    public function getOrder()
+    {
+
+        return $this->order;
+    }
+
+    public function setOrder($order){
+        $this->order = $order;
 
         return $this;
     }
